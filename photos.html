@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Photos - Scouts Du Liban - Groupe St. Jaques Bouar - 52ème</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+
+   /* === Navbar (Luxury Glassmorphism) === */
+  .navbar {
+    background: rgba(19, 43, 99, 0.9);
+    backdrop-filter: blur(10px);
+    transition: background 0.4s ease;
+  }
+  .navbar.scrolled {
+    background: rgba(19, 43, 99, 0.9);
+  }
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #f5f5f5 !important;
+    letter-spacing: 1px;
+  }
+  .nav-link {
+    position: relative;
+    color: #ddd !important;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  .nav-link:hover {
+    color: #f7d794 !important;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #f7d794;
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* ✅ Keep navbar one line on mobile but allow dropdown to open */
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 992px) {
+    .navbar-brand {
+      font-size: 1rem;
+    }
+    .navbar-brand img {
+      width: 35px;
+      height: 35px;
+    }
+    .navbar-toggler {
+      margin-left: auto;
+    }
+  }
+
+/* === Card Groups === */
+.card-group-link {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  height: 250px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+}
+
+.card-group-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.card-group-link::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.card-group-link h3 {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  z-index: 2;
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.card-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 0;
+}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2CGWZC8ML3FV1sbsBcDpPJw4GvVWPsTsTeA&s" 
+             alt="Scouts Logo" width="40" height="40" class="me-2 rounded-circle">
+        St. Jacques Bouar - 52ème
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="photos.html">Photos</a></li>
+        
+          <li class="nav-item"><a class="nav-link" href="maps.html">Emplacements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact"></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero spacing -->
+  <div class="container" style="margin-top:100px;">
+    <h1 class="text-center mb-5">Photo Albums by Unit</h1>
+    <div class="row g-4">
+      <!-- Groupe -->
+      <div class="col-md-4 col-sm-6">
+        <a href="https://photos.app.goo.gl/NdXcsrKrqTdSPUYz6" target="_blank" class="text-decoration-none">
+          <div class="card-group-link">
+            <img src="images/DSC_0284.jpg" alt="Groupe" class="card-bg">
+            <h3>Maîtrise + Events</h3>
+          </div>
+        </a>
+      </div>
+      <!-- Louveteaux -->
+      <div class="col-md-4 col-sm-6">
+        <a href="https://photos.app.goo.gl/McuuxCdUeJ12NVCo8" target="_blank" class="text-decoration-none">
+          <div class="card-group-link">
+            <img src="images/IMG_20241229_104559.jpg" alt="Louveteaux" class="card-bg">
+            <h3>Louveteaux</h3>
+          </div>
+        </a>
+      </div>
+      <!-- Louvettes -->
+      <div class="col-md-4 col-sm-6">
+        <a href="https://photos.app.goo.gl/VPo3nkgbF4QNx28M7" target="_blank" class="text-decoration-none">
+          <div class="card-group-link">
+            <img src="images/IMG_7108.jpg" alt="Louvettes" class="card-bg">
+            <h3>Louvettes</h3>
+          </div>
+        </a>
+      </div>
+      <!-- Éclaireurs -->
+      <div class="col-md-4 col-sm-6">
+        <a href="https://photos.app.goo.gl/3YyBubQrNDrLfZ3e9" target="_blank" class="text-decoration-none">
+          <div class="card-group-link">
+            <img src="images/DSC_0579.jpg" alt="Éclaireurs" class="card-bg">
+            <h3>Éclaireurs</h3>
+          </div>
+        </a>
+      </div>
+      <!-- Éclaireuses -->
+      <div class="col-md-4 col-sm-6">
+        <a href="https://photos.app.goo.gl/Zq6z6CuBo5A7U1kT9" target="_blank" class="text-decoration-none">
+          <div class="card-group-link">
+            <img src="images/1243b4cb-fb98-4a22-9f1c-bab228dd4a0c.jpg" alt="Éclaireuses" class="card-bg">
+            <h3>Éclaireuses</h3>
+          </div>
+        </a>
+      </div>
+      <!-- Clan -->
+      <div class="col-md-4 col-sm-6">
+        <a href="https://photos.app.goo.gl/ujbB9NWyx1sTGYx67" target="_blank" class="text-decoration-none">
+          <div class="card-group-link">
+            <img src="images/DSC_0410.jpg" alt="Clan" class="card-bg">
+            <h3>Clan</h3>
+          </div>
+        </a>
+      </div>
+      <!-- Pionnières -->
+      <div class="col-md-4 col-sm-6">
+        <a href="https://photos.app.goo.gl/wQLo38g3MBqEPwkn8" target="_blank" class="text-decoration-none">
+          <div class="card-group-link">
+            <img src="images/IMG_3981.jpg" alt="Pionnières" class="card-bg">
+            <h3>Pionnières</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
