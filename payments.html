@@ -3,180 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payments - Scouts Du Liban - Groupe St. Jacques Bouar - 52ème</title>
+  <title>Payments - Scouts Du Liban - Groupe St. Jaques Bouar - 52ème</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
   <style>
-    /* === Navbar (Luxury Glassmorphism) === */
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Navbar */
     .navbar {
-      background: rgba(19, 43, 99, 0.9);
-      backdrop-filter: blur(10px);
-      transition: background 0.4s ease;
+      background-color: #1a1a1a !important;
     }
-    .navbar.scrolled {
-      background: rgba(19, 43, 99, 0.9);
-    }
+
     .navbar-brand {
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: #f5f5f5 !important;
-      letter-spacing: 1px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
     }
+
     .nav-link {
-      position: relative;
       color: #ddd !important;
-      margin: 0 10px;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-    .nav-link:hover {
-      color: #f7d794 !important;
-    }
-    .nav-link::after {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #f7d794;
-      transition: width 0.3s ease;
-    }
-    .nav-link:hover::after {
-      width: 100%;
+      transition: 0.3s;
     }
 
-    /* === Hero Banner === */
-    #hero {
-      position: relative;
-      background: url('images/c1.jpg') no-repeat center center;
-      background-size: cover;
-      height: 60vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-    }
-    #hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.5);
-    }
-    #hero .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-    #hero h1 {
-      font-weight: 800;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    .nav-link:hover, .nav-link.active {
+      color: #fff !important;
+      text-decoration: underline;
     }
 
-    /* === Payment Form === */
-    #payment-section {
-      background: #f8f9fa;
-      padding: 60px 0;
+    /* Payment card */
+    .payment-section {
+      padding: 80px 0;
     }
+
     .payment-card {
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
       padding: 40px;
       max-width: 600px;
-      margin: auto;
-    }
-    .form-control, .form-select {
-      border-radius: 10px;
-      padding: 12px;
-    }
-    .btn-submit {
-      background: linear-gradient(135deg, #f7d794, #feca57);
-      color: #222;
-      font-weight: 600;
-      border-radius: 30px;
-      padding: 12px 30px;
-      transition: all 0.3s ease;
-      border: none;
-    }
-    .btn-submit:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      margin: 0 auto;
     }
 
-    /* === Footer === */
+    h2 {
+      font-weight: 600;
+      color: #333;
+    }
+
+    button[type="submit"] {
+      background-color: #006633;
+      border: none;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #004d26;
+    }
+
+    #status {
+      margin-top: 15px;
+      display: none;
+      text-align: center;
+    }
+
     footer {
-      background: linear-gradient(135deg, #111, #222);
+      background-color: #1a1a1a;
+      color: #ccc;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
     }
-    footer p {
-      margin: 0;
-      font-size: 0.9rem;
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
     }
-    .social-icon {
-      color: #ddd;
-      font-size: 1.3rem;
-      margin: 0 10px;
-      transition: all 0.3s ease;
-    }
-    .social-icon:hover {
-      color: #f7d794;
-      transform: translateY(-5px) scale(1.2);
+
+    footer a:hover {
+      color: white;
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <!-- ✅ Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2CGWZC8ML3FV1sbsBcDpPJw4GvVWPsTsTeA&s"
-             alt="Scouts Logo" width="40" height="40" class="me-2 rounded-circle">
-        St. Jacques Bouar
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand" href="index.html">Scouts du Liban - 52ème Bouar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="photos.html">Photos</a></li>
-          <li class="nav-item"><a class="nav-link" href="maps.html">Emplacements</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link active" href="payments.html">Payments</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content">
-      <h1>Payments</h1>
-      <p>Submit your payments here</p>
-    </div>
-  </section>
-
-  <!-- Payment Form Section -->
-  <section id="payment-section">
+  <!-- ✅ Payment Form Section -->
+  <section class="payment-section">
     <div class="container">
       <div class="payment-card">
-        <h3 class="text-center mb-4 fw-bold">Payment Submission Form</h3>
-
-        <form action="https://script.google.com/macros/s/AKfycbwh85Nq54FJYOXE75H76ohOPr3isZvJsqVSlzxLabaIVadPHDNPcQdc5dwli0wwevFI/exec" method="POST" target="_self">
+        <h2 class="text-center mb-4">Submit Payment</h2>
+        <form id="paymentForm" action="https://script.google.com/macros/s/AKfycbwh85Nq54FJYOXE75H76ohOPr3isZvJsqVSlzxLabaIVadPHDNPcQdc5dwli0wwevFI/exec" method="POST" target="hidden_iframe" onsubmit="showLoadingMessage()">
           <div class="mb-3">
-            <label for="name" class="form-label fw-semibold">Full Name</label>
-            <input type="text" name="name" id="name" class="form-control" placeholder="Enter your full name" required>
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" name="name" required>
           </div>
-
           <div class="mb-3">
-            <label for="unit" class="form-label fw-semibold">Unit</label>
-            <select name="unit" id="unit" class="form-select" required>
-              <option value="">Select your Unit</option>
+            <label for="unit" class="form-label">Unit</label>
+            <select class="form-select" name="unit" required>
+              <option value="">Select Unit</option>
               <option>CG</option>
               <option>MDG</option>
               <option>Louveteaux</option>
@@ -187,46 +130,47 @@
               <option>Pionneieres</option>
             </select>
           </div>
-
           <div class="mb-3">
-            <label for="amount" class="form-label fw-semibold">Amount (USD)</label>
-            <input type="number" name="amount" id="amount" class="form-control" placeholder="Enter amount in USD" required min="1" step="0.01">
+            <label for="amount" class="form-label">Amount (USD)</label>
+            <input type="number" class="form-control" name="amount" required>
           </div>
-
           <div class="mb-3">
-            <label for="description" class="form-label fw-semibold">Description</label>
-            <textarea name="description" id="description" class="form-control" rows="3" placeholder="Write a short note or reason for payment"></textarea>
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" name="description" rows="2"></textarea>
           </div>
-
-          <div class="text-center">
-            <button type="submit" class="btn-submit">Submit</button>
-          </div>
+          <button type="submit" class="btn btn-success w-100">Submit Payment</button>
         </form>
+
+        <div id="status" class="alert" role="alert"></div>
+        <iframe name="hidden_iframe" style="display:none;" onload="submissionComplete()"></iframe>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-white text-center py-4">
-    <p>© 2025 Scouts Du Liban - Groupe St. Jacques Bouar - 52ème Mont Liban</p>
-    <div>
-      <a href="https://www.facebook.com/profile.php?id=100089730670165" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/sdl_stjacques_bouar" class="social-icon"><i class="fab fa-instagram"></i></a>
-      <a href="https://youtube.com/@sdl-groupestjacquesbouar4600" class="social-icon"><i class="fab fa-youtube"></i></a>
-    </div>
+  <!-- ✅ Footer -->
+  <footer>
+    <p>&copy; 2025 Scouts du Liban - Groupe St. Jaques Bouar - 52ème | <a href="index.html">Home</a> | <a href="gallery.html">Gallery</a> | <a href="about.html">About</a></p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ✅ Scripts -->
   <script>
-    // Navbar scroll effect
-    window.addEventListener("scroll", function() {
-      const navbar = document.querySelector(".navbar");
-      if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
+    function showLoadingMessage() {
+      const status = document.getElementById('status');
+      status.style.display = 'block';
+      status.className = 'alert alert-info';
+      status.textContent = '⏳ Submitting... Please wait.';
+    }
+
+    function submissionComplete() {
+      const status = document.getElementById('status');
+      if (status.textContent.includes('Submitting')) {
+        status.className = 'alert alert-success';
+        status.textContent = '✅ Submission sent successfully!';
+        document.getElementById('paymentForm').reset();
       }
-    });
+    }
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
